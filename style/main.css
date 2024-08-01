@@ -1,0 +1,143 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+/* переменные цветов */
+:root {
+  --accent-1: #00868a;
+  --accent-2: #4fbfa5;
+  --white: #fff;
+}
+.container {
+  max-width: 1344px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin: 0 auto;
+}
+/* block offer */
+.offer {
+  padding-top: 98px;
+  padding-bottom: 226px;
+}
+.text-h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 72px;
+  text-align: center;
+  color: var(--accent-1);
+  margin-bottom: 60px;
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.grid-item {
+  max-width: 306px;
+  width: 100%;
+  height: 343px;
+  display: flex;
+  flex-direction: column;
+}
+.grid-bgr {
+  height: 230px;
+  /* height: 100%; так не работает почему то */
+  padding-top: 40px;
+  padding-left: 30px;
+}
+
+.grid-bgr__btn {
+  text-decoration: none;
+  padding: 9px 15px 10px 15px;
+  font-weight: 700;
+  font-size: 18px;
+  background-color: var(--accent-2);
+  color: var(--white);
+  transition: 0.5s ease;
+}
+
+.grid-bgr__btn:hover {
+  background-color: var(--accent-1);
+}
+.offer-flex {
+  background-color: var(--accent-1);
+  height: 114px;
+  padding-left: 30px;
+  padding-right: 28px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.flex-item1__text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--white);
+}
+.flex-item2-btn {
+  transition: 0.5s ease;
+}
+.flex-item2-btn:hover {
+  transform: scale(1.1);
+}
+/* Media */
+@media screen and (max-width: 1344px) {
+  .offer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .offer-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media screen and (max-width: 540px) {
+  .text-h1 {
+    font-size: 36px;
+    margin-bottom: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .text-h1 {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .flex-item1__text {
+    font-size: 12px;
+  }
+  .offer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container {
+    padding: 0 10px;
+  }
+}
+@media screen and (max-width: 324px) {
+  .container {
+    padding: 0 5px;
+  }
+}
